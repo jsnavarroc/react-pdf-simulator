@@ -44,7 +44,7 @@
       marginBottom:'2vh',
       minWidth:'818px',
       maxWidth:'818px',
-      // height: '1055px',
+      height: '1055px',
       // maxHeight: '1055px',
       // /* Forma  */
       // display: 'static',
