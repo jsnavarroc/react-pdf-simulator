@@ -1,8 +1,6 @@
 
 
-# Flexbox playground 
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors)
-
+# Pdf Simulator
 
 # How to install yarn
 
