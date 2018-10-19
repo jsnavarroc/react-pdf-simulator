@@ -1,22 +1,7 @@
 
 
 # Pdf Simulator
-
-# How to run the app - Available Scripts
-In the project directory, you can run:
-
-```
-yarn start
-```
-
-Runs the app in the development mode.
-Open http://localhost:3001 to view it in the browser.
-
-
-Launches the test runner in the interactive watch mode.
-
-
-# Como instalar el proyecto
+## Como instalar la libreria. 
 
 Se instala así: 
     
@@ -45,3 +30,17 @@ Se verá así:
 Los atributos que se pueden modificar son:
 
 Aún sin construir 
+
+## How to run the app - Available Scripts
+In the project directory, you can run:
+```
+yarn start
+```
+
+Runs the app in the development mode.
+Open http://localhost:3001 to view it in the browser.
+
+
+Launches the test runner in the interactive watch mode.
+
+
