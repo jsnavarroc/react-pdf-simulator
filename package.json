@@ -3,7 +3,7 @@
   "npmName": "react-pdf-simulator",
   "version": "0.1.5",
   "description": "This component allows you to set html code as if it were PDF",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
