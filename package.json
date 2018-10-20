@@ -1,15 +1,15 @@
 {
   "name": "react-pdf-simulator",
   "npmName": "react-pdf-simulator",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "This component allows you to set html code as if it were PDF",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
     "clean": "rimraf dist",
     "transpile": "babel src -d dist --copy-files",
-    "prepublishOnly": "npm run clean && npm run transpile"
+    "prepublishOnly": "yarn clean && yarn transpile"
   },
   "peerDependencies": {
     "react": "^16.5.2",
