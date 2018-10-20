@@ -10,11 +10,11 @@ const FoilView = ({ classes, textHTML } ) => {
                 <div className={classes.stylesText}>
                     <Texto textHTML = {textHTML}/>
                 </div>
-            </div>         
+            </div>
         );
-}
+};
 Texto.propTypes = {
-    textHTML:PropTypes.array,    
+    textHTML:PropTypes.array,
 };
 export default withStyles(stylesDataView)(FoilView);
 

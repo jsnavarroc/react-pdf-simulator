@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ContainerView from './containers/ContainerView.js';
+import ContainerView from './containers/ContainerView';
 
 class PDFsimulate extends Component {
     /*

@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Texto = ({textHTML})  => {
+const Texto = ({ textHTML })  => {
 
-    
     const divStyles = {
         display: 'block',
         padding:'20px',
         fontFamily: 'Helvetica, sans-serif',
         textAlign:'justify',
         overflow: 'hidden',
-    }
-    
+    };
+
     return (
         <div style = {divStyles} >
          {textHTML}
@@ -19,10 +18,8 @@ const Texto = ({textHTML})  => {
     );
 };
 
-
-
 Texto.propTypes = {
-    textHTML:PropTypes.array,    
+    textHTML:PropTypes.array,
 };
 
-export default Texto; 
+export default Texto;
