@@ -9,19 +9,12 @@ import Remove from '@material-ui/icons/Remove';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-const theme = createMuiTheme({
-    palette: {
-      primary: {  main: '#F2F2F2' }, // Purple and green play nicely together.
-      secondary: { main: '#F2F2F2' }, // This is just green.A700 as hex.
-    },
-  });
-
 class ContainerView extends Component {
 
     constructor(props) {
         super(props);
         this.state ={
-            zoomNum:1,
+            zoomNum:0.5,
         };
     }
 
@@ -38,14 +31,24 @@ class ContainerView extends Component {
     render() {
         const { classes, textHTML } = this.props;
         const { zoomNum } = this.state;
+        const theme = createMuiTheme({
+            typography: {
+                useNextVariants: true,
+              },
+            palette: {
+              primary: {  main: '#F2F2F2' }, // Purple and green play nicely together.
+              secondary: { main: '#F2F2F2' }, // This is just green.A700 as hex.
+            },
+
+          });
 
         return (
 
             <div className={classes.stylesContainerView}>
-                <Grid fluid >
+                  <Grid fluid>
                    <Row>
-                        <Col xs={11} md={11}>
-                            <div style = {zoomCss(zoomNum)}  >
+                        <Col xs={11} md={11} className={classes.controlMarging}>
+                            <div style = {zoomCss(zoomNum)}   >
                                 <FoilView textHTML = {textHTML}/>
                             </div>
                         </Col>
