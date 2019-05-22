@@ -1,22 +1,21 @@
-import React from "react";
-import Button from "@material-ui/core/Button";
+import React from 'react';
+import Fab from '@material-ui/core/Fab';
 import PropTypes from 'prop-types';
 
 function FloatingActionButtons(props) {
-  const { Icon, classStyle, color, functionPDF } = props;
+  const { Icon, classStyle, color, functionPDF, textHTML } = props;
 
   return (
     <div>
-      <Button 
-      variant="fab"  
-      mini  
-      color={color} 
-      aria-label="Add"  
-      className={classStyle} 
-      onClick =  {() => functionPDF? functionPDF():null}
+      <Fab
+      size={'small'}
+      color={color}
+      aria-label="Add"
+      className={classStyle}
+      onClick =  {(event) => functionPDF? functionPDF({ ...event, textHTML }):null}
       >
         {Icon}
-      </Button>
+      </Fab>
     </div>
   );
 }

@@ -21,7 +21,7 @@ module.exports = {
   },
   "rules": {
     // require file to end with single newline
-    "eol-last": 2,
+    "eol-last": 1,
     // use the type-safe equality operators === and !== instead of their regular counterparts == and !=
     "eqeqeq": 1,
     // suggest to use let or const instead of var

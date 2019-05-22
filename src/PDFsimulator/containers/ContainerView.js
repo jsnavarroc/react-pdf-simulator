@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import FoilView from '../dummy/FoilView';
-import { withStyles } from '@material-ui/core/styles';
-import { stylesContainerView, zoomCss } from '../tools/styles/styles';
 import PropTypes from 'prop-types';
-import ButtonContent from '../tools/commons/ButtonContent';
+import { withStyles } from '@material-ui/core/styles';
 import AddIcon from '@material-ui/icons/Add';
 import Remove from '@material-ui/icons/Remove';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-
+import FoilView from '../dummy/FoilView';
+import ButtonContent from '../tools/commons/ButtonContent';
+import CustomisationButtons from '../dummy/CustomisationButtons';
+import { stylesContainerView, zoomCss } from '../tools/styles/styles';
 class ContainerView extends Component {
 
     constructor(props) {
@@ -28,8 +28,9 @@ class ContainerView extends Component {
     }
     renderAddIcon = () => (<AddIcon/>)
     renderRemoveIcon = () => (<Remove/>)
+
     render() {
-        const { classes, textHTML } = this.props;
+        const { classes, textHTML, customisationButtons } = this.props;        
         const { zoomNum } = this.state;
         const theme = createMuiTheme({
             typography: {
@@ -67,6 +68,7 @@ class ContainerView extends Component {
                                     Icon = {this.renderRemoveIcon()}
                                     classStyle = {classes.buttonConmon}
                                     />
+                                    <CustomisationButtons  customisation = {customisationButtons} textHTML = {textHTML}/>
                             </MuiThemeProvider>
                             </div>
                         </Col>
@@ -81,6 +83,7 @@ class ContainerView extends Component {
 ContainerView.propTypes = {
     class:PropTypes.object,
     textHTML:PropTypes.array,
+    customisationButtons:PropTypes.array,
 };
 
 export default withStyles(stylesContainerView)(ContainerView);

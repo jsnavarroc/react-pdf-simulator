@@ -8,15 +8,16 @@ class PDFsimulate extends Component {
      *deprendiendo del tamaño de las etiquetas html
     */
     render() {
-        const { children } = this.props;
+        const { children, customisationButtons } = this.props;
         return (
-            <ContainerView textHTML = {children} />
+            <ContainerView textHTML = {children} customisationButtons={customisationButtons} />
         );
     }
 }
 
 PDFsimulate.propTypes = {
     children:PropTypes.array,
+    customisationButtons:PropTypes.array,
 };
 
 export default PDFsimulate;
