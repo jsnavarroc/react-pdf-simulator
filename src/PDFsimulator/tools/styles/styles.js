@@ -1,18 +1,19 @@
 export const stylesContainerView = ( ) => ({
   stylesContainerView: {
       backgroundColor: '#525659',
-      width:'492px',
-      height: '88vh',
-      maxHeight:'88vh',
-      minHeight:'88vh',
-      maxWidth:'818px',
-      minWidth:'492px',
+      width:'68.14404432132964vh', //Se optiene props
+      height: '88vh', //Se optiene props
+      // maxHeight:'88vh',
+      // minHeight:'88vh',
+      // maxWidth:'818px',
+      // minWidth:'492px',
       margin: '8px',
       justifyContent: 'center',
-      alignItems: 'center',
-      overflow: 'scroll',
-      resize: 'both',
+      // alignItems: 'center',
+      overflow: 'auto',
+      // resize: 'both',
       display: 'block',
+      alignItems: 'flex-start',
       WebkitBoxShadow: '0px 2px 20px -2px rgba(0,0,0,0.58)',
       MozBoxShadow: '0px 2px 20px -2px rgba(0,0,0,0.58)',
       BoxShadow: '0px 2px 20px -2px rgba(0,0,0,0.58)',
@@ -22,14 +23,14 @@ export const stylesContainerView = ( ) => ({
     zoom: '1',
   },
   controlMarging: {
-    height: '2px',
+    height: '20px',
   },
   // Styles button
   buttonConmon: {
     marginBottom:'20px',
   },
   buttonContent:{
-    marginTop: '55vh',
+    marginTop: '5vh',
     marginBottom: '10vh',
     position: 'fixed',
     marginLeft: '-7px',
@@ -53,8 +54,8 @@ export const stylesDataView = (  ) => ({
     marginBottom:'2vh',
     minWidth:'818px',
     maxWidth:'818px',
-    height: '1055px',
-    // maxHeight: '1055px',
+    height: '146.1218836565097vh',
+    // maxHeight: '146.1218836565097vh',
     // /* Forma  */
     // display: 'static',
     // position: 'relative',
@@ -71,10 +72,10 @@ export const stylesDataView = (  ) => ({
      /*  Tamaño  */
     margin:'39px auto',
     marginBottom:'7.5vh',
-    // minWidth:'818px',
-    // maxWidth:'818px',
-    // height: '975px',
-    // maxHeight: '975px',//Esto es el alto maximo de la pagina
+    minWidth:'818px',
+    maxWidth:'818px',
+    height: '975px',
+    maxHeight: '975px', //Esto es el alto maximo de la pagina
     // /* Forma  */
     // position: 'relative',
     // Shadow

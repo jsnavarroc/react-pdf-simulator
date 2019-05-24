@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import AddIcon from '@material-ui/icons/Add';
-import Remove from '@material-ui/icons/Remove';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import FoilView from '../dummy/FoilView';
-import ButtonContent from '../tools/commons/ButtonContent';
 import CustomisationButtons from '../dummy/CustomisationButtons';
 import { stylesContainerView, zoomCss } from '../tools/styles/styles';
+import ButtonsDefault from '../tools/commons/ButtonsDefault';
 class ContainerView extends Component {
 
     constructor(props) {
@@ -18,20 +16,14 @@ class ContainerView extends Component {
         };
     }
 
-    zoomOut = () => {
-        const { zoomNum } = this.state;
-        this.setState({ zoomNum:zoomNum-0.1 });
-    }
-    zoomIn = () => {
-        const { zoomNum } = this.state;
-        this.setState({ zoomNum:zoomNum+0.1 });
-    }
-    renderAddIcon = () => (<AddIcon/>)
-    renderRemoveIcon = () => (<Remove/>)
+    zoomOut = () => this.setState({ zoomNum: this.state.zoomNum-0.1 })
+    zoomIn = () => this.setState({ zoomNum:this.state.zoomNum+0.1 })
+    zoomReset = () => this.setState({ zoomNum:0.5 })
 
     render() {
-        const { classes, textHTML, customisationButtons } = this.props;        
-        const { zoomNum } = this.state;
+        const { props:{ classes, textHTML, customisationButtons }, state: { zoomNum },
+                zoomOut, zoomIn, zoomReset  } = this;
+        const functionsButtonsDefault = { zoomOut, zoomIn, zoomReset };
         const theme = createMuiTheme({
             typography: {
                 useNextVariants: true,
@@ -55,21 +47,10 @@ class ContainerView extends Component {
                         </Col>
                         <Col xs ={1} md={1}>
                             <div className = {classes.buttonContent} >
-                            <MuiThemeProvider theme={theme}>
-                                    <ButtonContent
-                                     Icon = {this.renderAddIcon()}
-                                     classStyle = {classes.buttonConmon}
-                                     color="primary"
-                                     functionPDF = {this.zoomIn}
-                                    />
-                                    <ButtonContent
-                                    color="primary"
-                                    functionPDF = {this.zoomOut}
-                                    Icon = {this.renderRemoveIcon()}
-                                    classStyle = {classes.buttonConmon}
-                                    />
-                                    <CustomisationButtons  customisation = {customisationButtons} textHTML = {textHTML}/>
-                            </MuiThemeProvider>
+                                <MuiThemeProvider theme={theme}>
+                                        <ButtonsDefault functionsButtonsDefault={functionsButtonsDefault}/>
+                                        <CustomisationButtons  customisation = {customisationButtons} textHTML = {textHTML}/>
+                                </MuiThemeProvider>
                             </div>
                         </Col>
                     </Row>

@@ -12,7 +12,7 @@
     "prepublishOnly": "yarn clean && yarn transpile",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
-    "pusblish-npm":"yarn prepublishOnly && yarn publish",
+    "pusblish-npm": "yarn prepublishOnly && yarn publish",
     "publish-demo": "yarn build && yarn deploy"
   },
   "peerDependencies": {
@@ -54,8 +54,8 @@
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "rimraf": "^2.6.2",
     "style-loader": "^0.23.1",
     "webpack": "^4.21.0",
