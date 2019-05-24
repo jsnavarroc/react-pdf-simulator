@@ -10,18 +10,21 @@ import ButtonsDefault from '../tools/commons/ButtonsDefault';
 class ContainerView extends Component {
 
     constructor(props) {
+        const { customisationViewpoint } = props;
+        const zoomNum  = customisationViewpoint.zoomDefault? customisationViewpoint.zoomDefault.zoomNumInit:0.5;
         super(props);
         this.state ={
-            zoomNum:0.5,
+            zoomNumInitOriginal:zoomNum,
+            zoomNumInit:zoomNum,
         };
     }
 
-    zoomOut = () => this.setState({ zoomNum: this.state.zoomNum-0.1 })
-    zoomIn = () => this.setState({ zoomNum:this.state.zoomNum+0.1 })
-    zoomReset = () => this.setState({ zoomNum:0.5 })
+    zoomOut = () => this.setState({ zoomNumInit: this.state.zoomNumInit-0.1 })
+    zoomIn = () => this.setState({ zoomNumInit:this.state.zoomNumInit+0.1 })
+    zoomReset = () => this.setState({ zoomNumInit:this.state.zoomNumInitOriginal })
 
     render() {
-        const { props:{ classes, textHTML, customisationButtons }, state: { zoomNum },
+        const { props:{ classes, textHTML, customisationButtons, customisationViewpoint }, state: { zoomNumInit },
                 zoomOut, zoomIn, zoomReset  } = this;
         const functionsButtonsDefault = { zoomOut, zoomIn, zoomReset };
         const theme = createMuiTheme({
@@ -37,11 +40,11 @@ class ContainerView extends Component {
 
         return (
 
-            <div className={classes.stylesContainerView}>
+            <div style = {stylesContainerView(customisationViewpoint).stylesContainerView}>
                   <Grid fluid>
                    <Row>
                         <Col xs={11} md={11} className={classes.controlMarging}>
-                            <div style = {zoomCss(zoomNum)}   >
+                            <div style = {zoomCss(zoomNumInit)}   >
                                 <FoilView textHTML = {textHTML}/>
                             </div>
                         </Col>
@@ -63,8 +66,9 @@ class ContainerView extends Component {
 
 ContainerView.propTypes = {
     class:PropTypes.object,
-    textHTML:PropTypes.array,
+    textHTML:PropTypes.object,
     customisationButtons:PropTypes.array,
+    customisationViewpoint:PropTypes.object,
 };
 
 export default withStyles(stylesContainerView)(ContainerView);

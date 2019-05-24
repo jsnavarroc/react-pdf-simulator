@@ -8,16 +8,23 @@ class PDFsimulate extends Component {
      *deprendiendo del tamaño de las etiquetas html
     */
     render() {
-        const { children, customisationButtons } = this.props;
+        const { children, customisationButtons, customisationViewpoint } = this.props;
+        const customisationButtonsOk = customisationButtons||[];
+        const customisationViewpointOk = customisationViewpoint||{};
         return (
-            <ContainerView textHTML = {children} customisationButtons={customisationButtons} />
+            <ContainerView
+                textHTML = {children}
+                customisationButtons={customisationButtonsOk}
+                customisationViewpoint={customisationViewpointOk}
+            />
         );
     }
 }
 
 PDFsimulate.propTypes = {
-    children:PropTypes.array,
+    children:PropTypes.object,
     customisationButtons:PropTypes.array,
+    customisationViewpoint:PropTypes.object,
 };
 
 export default PDFsimulate;

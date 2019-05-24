@@ -14,7 +14,7 @@ const FoilView = ({ classes, textHTML } ) => {
         );
 };
 Texto.propTypes = {
-    textHTML:PropTypes.array,
+    textHTML:PropTypes.object,
 };
 export default withStyles(stylesDataView)(FoilView);
 

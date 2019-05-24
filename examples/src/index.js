@@ -2,9 +2,11 @@ import React from 'react';
 import { render } from 'react-dom';
 import PDFsimulator from '../../src/index';
 import { CustomisationButtons } from './CustomisationButtons';
+import { CustomisationViewpoint } from './CustomisationViewpoint';
 const App = () => (
     <PDFsimulator
     customisationButtons={CustomisationButtons}
+    customisationViewpoint={CustomisationViewpoint}
     >
         <div id = "contentText">
             <h1>¡¡Hola Mundo!!</h1>
