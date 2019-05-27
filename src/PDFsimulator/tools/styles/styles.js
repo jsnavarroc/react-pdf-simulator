@@ -3,16 +3,21 @@
   backgroundColor: '#525659',
   width:'68.14404432132964vh',
   height: '88vh',
- }
+ };
 
+ const styButtonContentDefault =  {
+  marginTop: '5vh', /* Se edita altura de botones */
+ };
 export const stylesContainerView = (customisationViewpoint ) => {
 
- 
 const stylesContainer = customisationViewpoint.stylesContainerView? customisationViewpoint.stylesContainerView : stylesContainerViewEdit;
+const styButtonContent = customisationViewpoint.buttonContent? customisationViewpoint.buttonContent : styButtonContentDefault;
 return (
 {
           stylesContainerView: {
-              ...stylesContainer,
+              backgroundColor: stylesContainer.backgroundColor ||  '#525659',
+              width:stylesContainer.width ||  '68.14404432132964vh',
+              height: stylesContainer.height || '88vh',
               // maxHeight:'88vh',
               // minHeight:'88vh',
               // maxWidth:'818px',
@@ -40,7 +45,7 @@ return (
             marginBottom:'20px',
           },
           buttonContent:{
-            marginTop: '5vh',
+            marginTop: styButtonContent.marginTop ||'5vh', /* Se edita altura de botones */
             marginBottom: '10vh',
             position: 'fixed',
             marginLeft: '-7px',

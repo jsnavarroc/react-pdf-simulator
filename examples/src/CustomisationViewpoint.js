@@ -7,5 +7,8 @@ export const CustomisationViewpoint = {
     zoomDefault: {
         zoomNumInit:0.8,
     },
+    buttonContent:{
+        marginTop: '30vh', /* Se edita altura de botones */
+    },
 
 };

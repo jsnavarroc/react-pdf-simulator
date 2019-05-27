@@ -24,9 +24,10 @@ class ContainerView extends Component {
     zoomReset = () => this.setState({ zoomNumInit:this.state.zoomNumInitOriginal })
 
     render() {
-        const { props:{ classes, textHTML, customisationButtons, customisationViewpoint }, state: { zoomNumInit },
+        const { props:{ classes, textHTML, customisationButtons, customisationViewpoint }, state: { zoomNumInit, zoomNumInitOriginal },
                 zoomOut, zoomIn, zoomReset  } = this;
         const functionsButtonsDefault = { zoomOut, zoomIn, zoomReset };
+        const stateZoom = { zoomNumInitOriginal, zoomNumInit };
         const theme = createMuiTheme({
             typography: {
                 useNextVariants: true,
@@ -49,9 +50,9 @@ class ContainerView extends Component {
                             </div>
                         </Col>
                         <Col xs ={1} md={1}>
-                            <div className = {classes.buttonContent} >
+                            <div style = {stylesContainerView(customisationViewpoint).buttonContent} >
                                 <MuiThemeProvider theme={theme}>
-                                        <ButtonsDefault functionsButtonsDefault={functionsButtonsDefault}/>
+                                        <ButtonsDefault functionsButtonsDefault={functionsButtonsDefault} stateZoom = {stateZoom}/>
                                         <CustomisationButtons  customisation = {customisationButtons} textHTML = {textHTML}/>
                                 </MuiThemeProvider>
                             </div>
