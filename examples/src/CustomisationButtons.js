@@ -28,8 +28,11 @@ const printPDF = (event) => {
         }, margins);
 };
 
+const alertTwo = (event) => {
+    console.log('func2');
+};
 export const CustomisationButtons  = [{
                     icon: renderCloudDownload,
-                    functionButton: printPDF,
+                    functionButton: [printPDF, alertTwo],
                     description: 'imprimir',
                 }];

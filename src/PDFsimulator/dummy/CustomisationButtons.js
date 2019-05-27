@@ -10,7 +10,7 @@ const CustomisationButtons = (props) => {
               <ButtonContent
               key={button.description}
               color="primary"
-              functionPDF = {button.functionButton}
+              functionPDF = {(e) => { button.functionButton.map((fun) => fun(e)); }}
               Icon = {button.icon()}
               classStyle = {classes.buttonConmon}
               textHTML={textHTML}
