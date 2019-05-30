@@ -19,7 +19,10 @@ class ContainerView extends Component {
         };
     }
 
-    zoomOut = () => this.setState({ zoomNumInit: this.state.zoomNumInit-0.1 })
+    zoomOut = () => {
+        const { zoomNumInit } = this.state;
+        (zoomNumInit - 0.1)>=0.1? this.setState({ zoomNumInit: zoomNumInit-0.1 }) :this.setState({ zoomNumInit: 0.1 });
+    }
     zoomIn = () => this.setState({ zoomNumInit:this.state.zoomNumInit+0.1 })
     zoomReset = () => this.setState({ zoomNumInit:this.state.zoomNumInitOriginal })
 
