@@ -71,6 +71,8 @@ return (
             minWidth:'818px',
             maxWidth:'818px',
             height: '146.1218836565097vh',
+            maxHeight: '1054px',
+            minHeight: '1054px',
             // maxHeight: '146.1218836565097vh',
             // /* Forma  */
             // display: 'static',
@@ -86,12 +88,14 @@ return (
             /*  Contenido  */
             backgroundColor: 'white',
             /*  Tamaño  */
-            margin:'39px auto',
+            marginTop:'39px',
+            marginRight:'auto',
             marginBottom:'7.5vh',
+            marginLeft:'auto',
             minWidth:'818px',
             maxWidth:'818px',
-            height: '975px',
-            maxHeight: '975px', //Esto es el alto maximo de la pagina
+            height: '90%',
+            maxHeight: '90%', //Esto es el alto maximo de la pagina
             // /* Forma  */
             // position: 'relative',
             // Shadow
@@ -111,3 +115,17 @@ export const zoomCss = (num) => (
     TransformOrigin: '0 0',
   }
 );
+
+export const contentTextContent = (customisationViewpoint) => {
+  const { styleContent } = customisationViewpoint;
+  const styleContentDefault = {
+    display: 'block',
+    fontFamily: 'Helvetica, sans-serif',
+    textAlign:'justify',
+    overflow: 'hidden',
+  };
+  return styleContent ? {
+    ...styleContentDefault,
+    ...styleContent,
+  }:styleContentDefault;
+};

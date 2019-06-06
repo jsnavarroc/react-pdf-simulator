@@ -10,7 +10,7 @@ const CustomisationButtons = (props) => {
               <ButtonContent
               key={button.description}
               color="primary"
-              functionPDF = {(e) => { 
+              functionPDF = {(e) => {
                 button.functionButton?
                 button.functionButton.map((fun) => fun(e)):null;
                 }}

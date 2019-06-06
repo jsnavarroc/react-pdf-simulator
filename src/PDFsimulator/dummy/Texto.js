@@ -1,18 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Texto = ({ textHTML })  => {
-
-    const divStyles = {
-        display: 'block',
-        padding:'20px',
-        fontFamily: 'Helvetica, sans-serif',
-        textAlign:'justify',
-        overflow: 'hidden',
-    };
-
+const Texto = ({ textHTML, stlyleCustomContent })  => {
     return (
-        <div style = {divStyles} >
+        <div style = {stlyleCustomContent} >
          {textHTML}
         </div>
     );

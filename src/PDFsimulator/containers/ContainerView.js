@@ -5,7 +5,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import FoilView from '../dummy/FoilView';
 import CustomisationButtons from '../dummy/CustomisationButtons';
-import { stylesContainerView, zoomCss } from '../tools/styles/styles';
+import { stylesContainerView, zoomCss, contentTextContent } from '../tools/styles/styles';
 import ButtonsDefault from '../tools/commons/ButtonsDefault';
 class ContainerView extends Component {
 
@@ -36,8 +36,8 @@ class ContainerView extends Component {
                 useNextVariants: true,
               },
             palette: {
-              primary: {  main: '#F2F2F2' }, // Purple and green play nicely together.
-              secondary: { main: '#F2F2F2' }, // This is just green.A700 as hex.
+              primary: {  main: '#F2F2F2' },
+              secondary: { main: '#F2F2F2' },
             },
 
           });
@@ -49,7 +49,7 @@ class ContainerView extends Component {
                    <Row>
                         <Col xs={11} md={11} className={classes.controlMarging}>
                             <div style = {zoomCss(zoomNumInit)}   >
-                                <FoilView textHTML = {textHTML}/>
+                                <FoilView textHTML = {textHTML} stlyleCustomContent={contentTextContent(customisationViewpoint)}/>
                             </div>
                         </Col>
                         <Col xs ={1} md={1}>
