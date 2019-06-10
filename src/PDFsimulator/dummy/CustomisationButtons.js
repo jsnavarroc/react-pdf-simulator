@@ -12,7 +12,10 @@ const CustomisationButtons = (props) => {
               color="primary"
               functionPDF = {(e) => {
                 button.functionButton?
-                button.functionButton.map((fun) => fun(e)):null;
+                button.functionButton.map((fun) => {
+                  return fun? fun(e):null;
+                })
+                :null;
                 }}
               Icon = {button.icon()}
               classStyle = {classes.buttonConmon}
