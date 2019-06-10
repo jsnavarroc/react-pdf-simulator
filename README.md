@@ -25,7 +25,7 @@ Se carga así:
 
 Se verá así:
 
-![alt text](https://image.ibb.co/k9w5y0/5.png)
+![alt text](https://ibb.co/J38X2zD)
 
 puedes verlo aquí https://jsnavarroc.github.io/react-pdf-simulator/
 Los atributos que se pueden modificar son:
