@@ -4,7 +4,7 @@
 
 # react-pdf-simulator
 [![dependencies Status](https://david-dm.org/gregnb/mui-datatables/status.svg)](https://david-dm.org/jsnavarroc/react-pdf-simulator)
-[![npm version](https://badge.fury.io/js/react-pdf-simulator.svg)](https://badge.fury.io/js/react-pdf-simulator)
+[![npm version](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&type=6&v=2.2.14&x2=0)](https://badge.fury.io/js/react-pdf-simulator)
 
 ![alt text](https://i.ibb.co/hYrpHK3/image.png)
 ## Install
@@ -98,7 +98,7 @@ export const CustomisationViewpoint = {
 The files included in this repository are licensed under the MIT license.
 
 ## Thanks
-Thank you to [IAS](https://www.ias.com.co/en_US/) for providing the infrastructure that allows us to test in real browsers.
+Thank you to [IAS](https://www.ias.com.co/en_US/) for providing the infrastructure that allows me to test in real browsers.
 
 
 
